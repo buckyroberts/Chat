@@ -12,7 +12,13 @@
         $(document).ready(function () {
 
             $('#star').click(function () {
-                console.log('ummm... wtf');
+                var sampleJson = {
+                    "name": "Bucky",
+                    "age": 72,
+                    "colors": ["blue", "yellow"]
+                };
+                console.log(sampleJson.name);
+                $('.main-area').html('<h1>' + sampleJson.name + '</h1>');
             });
 
             $('.modal-control').click(function () {
