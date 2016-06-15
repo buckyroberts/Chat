@@ -3,7 +3,7 @@
 $chat-spacing: 8px;
 
 .chat-window{
-	background: rgba(255, 255, 255, 0.2);
+	color: #222;
 	height: 0;
 	overflow-y: auto;
 
@@ -44,7 +44,6 @@ $chat-spacing: 8px;
 }
 
 .bottom {
-	background-color: rgba(255, 255, 255, 0.2);
 	bottom: 0;
 	left: 0;
 	position: absolute;
@@ -53,6 +52,7 @@ $chat-spacing: 8px;
 	.compose-toolbar {
 		background-color: $primary;
 		display: flex;
+		opacity: 0.98;
 
 		a {
 			background-color: $primary;
@@ -62,7 +62,7 @@ $chat-spacing: 8px;
 			padding: 6px 12px;
 
 			&:hover {
-				background-color: $primary * 0.8;
+				background-color: $primary * 0.75;
 				color: #fff;
 			}
 		}
@@ -70,13 +70,13 @@ $chat-spacing: 8px;
 	}
 
 	.compose {
-		padding: $chat-spacing;
+		padding: $chat-spacing $chat-spacing 16px;
 
 		form {
 			display: flex;
 
 			textarea {
-				border: none;
+				border: 1px solid #bbb;
 				flex: 1;
 				margin-right: 10px;
 			}
