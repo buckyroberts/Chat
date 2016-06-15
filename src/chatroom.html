@@ -8,8 +8,15 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script>
-
         $(document).ready(function () {
+
+            $('.modal-control').click(function () {
+                var modal = $('#' + $(this).data('target'));
+                modal.css('display', 'block');
+                modal.find('.close').click(function () {
+                    modal.css('display', 'none');
+                });
+            });
 
             textareas = jQuery('textarea');
             textareas.data('x', textareas.outerWidth());
@@ -63,6 +70,31 @@
 </head>
 <body>
 
+    <div  class="modal" id="samplePopUp">
+        <div class="content">
+            <div class="content-heading">
+                <span class="title">Create a New Chatroom</span>
+                <span class="close">x</span>
+            </div>
+            <div class="content-body">
+                <form>
+                    <div class="form-row">
+                        <label>Name:</label>
+                        <input type="text" title="firstName">
+                    </div>
+                    <div class="form-row">
+                        <label>Description:</label>
+                        <textarea rows="4" cols="50" title="textArea"></textarea>
+                    </div>
+                    <div class="form-row">
+                        <label></label>
+                        <input class="form-item button-secondary" type="submit" title="submitButton">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <ul class="top-nav">
         <li>
             <a href="#" class="left-menu-control">
@@ -70,9 +102,9 @@
             </a>
         </li>
         <li>
-            <a href="#">
-                <i class="fa fa-comment" aria-hidden="true"></i>
-                <span class="text">Chatrooms</span>
+            <a href="#" class="modal-control" data-target="samplePopUp">
+                <i class="fa fa-plus" aria-hidden="true"></i>
+                <span class="text">New</span>
             </a>
         </li>
         <li>
@@ -84,7 +116,6 @@
                 <li><a href="#">Business</a></li>
                 <li><a href="#">Computer Science</a></li>
                 <li><a href="#">Math</a></li>
-                <li><a href="#">Social Sciences</a></li>
             </ul>
         </li>
         <li class="right">
@@ -96,14 +127,20 @@
 
     <ul class="left-nav visible">
         <li>
-            <a href="#">Chatrooms</a>
+            <a href="#">
+                <i class="fa fa-comments" aria-hidden="true"></i>
+                <span class="text">Chatrooms</span>
+            </a>
             <ul>
                 <li><a href="#">Developers <span class="label-info">17</span></a></li>
                 <li><a href="#">Pittsburgh Penguins</a></li>
             </ul>
         </li>
         <li>
-            <a href="#">Private Messages</a>
+            <a href="#">
+                <i class="fa fa-users" aria-hidden="true"></i>
+                <span class="text">Private Messages</span>
+            </a>
             <ul>
                 <li><a href="#">Emily Williams <span class="label-success">3</span></a></li>
                 <li><a href="#">Lisa Spencer <span class="label-secondary">12</span></a></li>
