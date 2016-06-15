@@ -1,0 +1,66 @@
+@import "themes/default/variables";
+
+$chat-spacing: 10px;
+
+.chat{
+	background: #fff;
+
+	& > ul{
+		margin: 0;
+		padding: $chat-spacing;
+
+		& > li{
+			align-items: flex-start;
+			border-bottom: 1px solid #ccc;
+			display: flex;
+			margin-bottom: $chat-spacing;
+			padding-bottom: $chat-spacing;
+
+			&:last-child{
+				border-bottom: none;
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+
+			img.icon {
+				margin-right: 6px;
+				max-width: 8%;
+			}
+
+			.message-content {
+				flex: 1;
+
+				.username{
+					font-weight: 500;
+				}
+
+			}
+
+		}
+	}
+
+	.compose-toolbar {
+		background-color: $primary;
+		display: flex;
+
+		a {
+			background-color: $primary;
+			color: #fff;
+			display: inline-block;
+			border-right: 1px solid $primary-light;
+			padding: 6px 12px;
+
+			&:hover {
+				background-color: $primary * 0.8;
+				color: #fff;
+			}
+		}
+
+	}
+
+	.compose {
+		border-top: 1px solid #ccc;
+		padding: $chat-spacing;
+	}
+
+}
