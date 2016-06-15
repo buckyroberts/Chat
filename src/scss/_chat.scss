@@ -3,21 +3,21 @@
 $chat-spacing: 8px;
 
 .chat-window{
-	background-color: rgba(255, 255, 255, 0.1);
+	background-color: rgba(255, 255, 255, 0.5);
 	color: #222;
 	height: 0;
 	overflow-y: auto;
 
 	& > ul{
 		margin: 0;
-		padding: $chat-spacing;
+		padding: 12px;
 
 		& > li{
 			align-items: flex-start;
 			border-bottom: 1px solid #ccc;
 			display: flex;
 			margin-bottom: $chat-spacing;
-			padding-bottom: $chat-spacing;
+			padding-bottom: 10px;
 
 			&:last-child{
 				border-bottom: none;
@@ -45,23 +45,25 @@ $chat-spacing: 8px;
 }
 
 .bottom {
+	background-color: rgba($primary-light, 0.5);
 	bottom: 0;
 	left: 0;
 	position: absolute;
 	right: 0;
 
 	.compose-toolbar {
-		background-color: $default;
+		background-color: $primary-light;
 		display: flex;
 
 		a {
+			border-right: 1px solid $primary-light * 1.1;
 			color: #fff;
 			display: inline-block;
-			border-right: 1px solid $default * 1.1;
+			font-size: 14px;
 			padding: 6px 12px;
 
 			&:hover {
-				background-color: $default * 0.9;
+				background-color: $primary-light * 0.8;
 				color: #fff;
 			}
 		}
@@ -69,13 +71,13 @@ $chat-spacing: 8px;
 	}
 
 	.compose {
-		padding: $chat-spacing $chat-spacing 16px;
+		padding: 10px 12px 16px;
 
 		form {
 			display: flex;
 
 			textarea {
-				border: 1px solid #bbb;
+				border: 1px solid #888;
 				flex: 1;
 				margin-right: 10px;
 			}

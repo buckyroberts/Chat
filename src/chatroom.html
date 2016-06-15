@@ -105,6 +105,7 @@
     </div>
 </div>
 
+    <!-- Navigation menus -->
     <ul class="top-nav">
         <li>
             <a href="#" class="left-menu-control">
@@ -135,7 +136,7 @@
             </a>
         </li>
     </ul>
-    <ul class="left-nav visible">
+    <ul style="display: none" class="left-nav visible">
         <li>
             <a href="#">
                 <i class="fa fa-comments" aria-hidden="true"></i>
@@ -209,27 +210,22 @@
         </ul>
     </div>
 
-    <div class="chat-window">
-        <ul>
-            <li>
-                <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
-                <div class="message-content">
-                    <div class="username">Bucky Roberts</div>
-                    Hey guys, do you like bacon?
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
-                <div class="message-content">
-                    <div class="username">Bucky Roberts</div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/uavdVHmzHG8" frameborder="0" allowfullscreen></iframe>
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="images/sample-user-1.jpg">
-                <div class="message-content">
-                    <div class="username">Barbara Walters</div>
-                    Here is some code I wrote. It's really bad lol.
+    <!-- Main area -->
+    <div class="main-area">
+        <div class="chat-window">
+            <ul>
+                <li>
+                    <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
+                    <div class="message-content">
+                        <div class="username">Bucky Roberts</div>
+                        Hey guys, do you like bacon?
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="images/sample-user-1.jpg">
+                    <div class="message-content">
+                        <div class="username">Barbara Walters</div>
+                        Here is some code I wrote. It's really bad lol.
 <pre class="prettyprint">int main(){
 
     int bertha[2][3] = {{1,2,3},{7,8,9}};
@@ -242,129 +238,103 @@
     }
 }
 </pre>
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="images/sample-user-2.png">
-                <div class="message-content">
-                    <div class="username">Emily Williams</div>
-                    Hey guys, do you like bacon?
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="images/sample-user-1.jpg">
-                <div class="message-content">
-                    <div class="username">Barbara Walters</div>
-                    Hey guys, do you like bacon?
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
-                <div class="message-content">
-                    <div class="username">Bucky Roberts</div>
-                    <img src="images/cute-monkey.jpg">
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="images/sample-user-2.png">
-                <div class="message-content">
-                    <div class="username">Emily Williams</div>
-                    Hey guys, do you like bacon?
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="images/sample-user-1.jpg">
-                <div class="message-content">
-                    <div class="username">Barbara Walters</div>
-                    Hey guys, do you like bacon?
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="images/sample-user-2.png">
-                <div class="message-content">
-                    <div class="username">Emily Williams</div>
-                    Hey guys, do you like bacon?
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
-                <div class="message-content">
-                    <div class="username">Bucky Roberts</div>
-                    Hey guys, do you like bacon?
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="images/sample-user-1.jpg">
-                <div class="message-content">
-                    <div class="username">Barbara Walters</div>
-                    Hey guys, do you like bacon?
-                </div>
-            </li>
-            <li>
-                <img class="icon" src="images/sample-user-2.png">
-                <div class="message-content">
-                    <div class="username">Emily Williams</div>
-                    Hey guys, do you like bacon?
-                </div>
-            </li>
-        </ul>
-    </div>
-    <div class="bottom">
-        <div class="compose-toolbar">
-            <a href="#"><i class="fa fa-bold" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-italic" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-code" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
-            <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="images/sample-user-2.png">
+                    <div class="message-content">
+                        <div class="username">Emily Williams</div>
+                        Hey guys, do you like bacon?
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
+                    <div class="message-content">
+                        <div class="username">Bucky Roberts</div>
+                        <img src="images/cute-monkey.jpg">
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="images/sample-user-1.jpg">
+                    <div class="message-content">
+                        <div class="username">Barbara Walters</div>
+                        Hey guys, do you like bacon?
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="images/sample-user-2.png">
+                    <div class="message-content">
+                        <div class="username">Emily Williams</div>
+                        Hey guys, do you like bacon?
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
+                    <div class="message-content">
+                        <div class="username">Bucky Roberts</div>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/uavdVHmzHG8" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="images/sample-user-1.jpg">
+                    <div class="message-content">
+                        <div class="username">Barbara Walters</div>
+                        Hey guys, do you like bacon?
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="images/sample-user-2.png">
+                    <div class="message-content">
+                        <div class="username">Emily Williams</div>
+                        Hey guys, do you like bacon?
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
+                    <div class="message-content">
+                        <div class="username">Bucky Roberts</div>
+                        Hey guys, do you like bacon?
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="images/sample-user-1.jpg">
+                    <div class="message-content">
+                        <div class="username">Barbara Walters</div>
+                        Hey guys, do you like bacon?
+                    </div>
+                </li>
+                <li>
+                    <img class="icon" src="images/sample-user-2.png">
+                    <div class="message-content">
+                        <div class="username">Emily Williams</div>
+                        Hey guys, do you like bacon?
+                    </div>
+                </li>
+            </ul>
         </div>
+        <div class="bottom">
+            <div class="compose-toolbar">
+                <a href="#"><i class="fa fa-bold" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-italic" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-code" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
+                <a href="#"><i class="fa fa-smile-o" aria-hidden="true"></i></a>
+            </div>
 
-        <div class="compose">
-            <form>
-                <textarea class="chatTextArea" rows="4" title="textArea"></textarea>
-                <div>
-                    <button class="button-danger">
-                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                    </button>
-                </div>
-            </form>
+            <div class="compose">
+                <form>
+                    <textarea class="chatTextArea" rows="4" title="textArea"></textarea>
+                    <div>
+                        <button class="button-danger">
+                            <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
