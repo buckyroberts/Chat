@@ -1,0 +1,54 @@
+@import "themes/default/variables";
+
+@font-face {
+	font-family: AgathaNeedsFlesh;
+	src: url('../fonts/AgathaNeedsFlesh.ttf');
+}
+
+.login-screen {
+	align-items: center;
+	background: $secondary;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	.main-content{
+		background: rgba(white, 0.1);
+		border: 1px solid rgba(white, 0.12);
+		margin-top: 15%;
+		padding: 24px 40px 40px;
+		text-align: center;
+		width: 40%;
+
+		.logo {
+			color: white;
+			font-family: 'AgathaNeedsFlesh', serif;
+			font-size: 8em;
+		}
+
+		form {
+
+			& > * {
+				border: none;
+				display: block;
+				padding: 0;
+				width: 100%;
+			}
+
+			textarea {
+				margin-bottom: 12px;
+				resize: vertical;
+			}
+
+			button {
+				font-size: 1.1em;
+				font-weight: 300;
+				padding: 6px;
+			}
+
+		}
+
+
+	}
+
+}
