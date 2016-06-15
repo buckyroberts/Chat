@@ -18,13 +18,12 @@
                 });
             });
 
-            textareas = jQuery('textarea');
+            textareas = jQuery('.chatTextArea');
             textareas.data('x', textareas.outerWidth());
             textareas.data('y', textareas.outerHeight());
             $(window).mouseup(function () {
-                var $this = jQuery(textareas);
+                var $this = jQuery('.chatTextArea');
                 if ($this.outerWidth() != $this.data('x') || $this.outerHeight() != $this.data('y')) {
-                    console.log($this.outerWidth() + ' - ' + $this.data('x') + '\n' + $this.outerHeight() + ' - ' + $this.data('y'));
                     $chatHeight = $(document).height() - $('.top-nav').height() - $('.bottom').height();
                     $('.chat-window').css('height', $chatHeight);
                 }
@@ -48,7 +47,6 @@
 
             // Right Sliding menu
             $('a.right-menu-control').click(function () {
-                console.log('k');
                 var rightMenu = $('.right-nav');
                 if (rightMenu.hasClass('visible')) {
                     rightMenu.animate({'right': '-240px'}, 250).removeClass('visible');
@@ -311,7 +309,7 @@
 
         <div class="compose">
             <form>
-                <textarea class="test" rows="4" title="textArea"></textarea>
+                <textarea class="chatTextArea" rows="4" title="textArea"></textarea>
                 <div>
                     <button class="button-danger">
                         <i class="fa fa-chevron-right" aria-hidden="true"></i>
