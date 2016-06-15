@@ -57,3 +57,25 @@ ul{
 		list-style-type: disc;
 	}
 }
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+
+// top and bottom buttons
+::-webkit-scrollbar-button {
+	height: 0;
+}
+
+
+::-webkit-scrollbar-corner {
+	background-color: black;
+}
