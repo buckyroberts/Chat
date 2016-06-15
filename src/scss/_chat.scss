@@ -1,10 +1,11 @@
 @import "themes/default/variables";
 
-$chat-spacing: 10px;
+$chat-spacing: 8px;
 
 .chat-window{
-	background: #fff;
-	height: 500px;
+	background: rgba(255, 255, 255, 0.3);
+	height: 0;
+	overflow-y: auto;
 
 	& > ul{
 		margin: 0;
@@ -43,7 +44,7 @@ $chat-spacing: 10px;
 }
 
 .bottom {
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.3);
 	bottom: 0;
 	left: 0;
 	position: absolute;
@@ -69,22 +70,14 @@ $chat-spacing: 10px;
 	}
 
 	.compose {
-		align-items: flex-start;
-		border-top: 1px solid #ccc;
-		display: flex;
 		padding: $chat-spacing;
 
 		form {
 			display: flex;
-			flex: 1;
-
-			img.icon {
-				margin-right: $chat-spacing;
-				height: 60px;
-				width: 60px;
-			}
 
 			textarea {
+				border: none;
+				height: 30px;
 				flex: 1;
 				margin-right: 10px;
 			}

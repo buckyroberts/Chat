@@ -10,6 +10,10 @@
     <script>
         $(document).ready(function () {
 
+            // Set height of chat window
+            $chatHeight = $(document).height() - $('.top-nav').height() - $('.bottom').height();
+            $('.chat-window').css('height', $chatHeight);
+
             // Sliding menu
             $('a.left-menu-control').click(function () {
                 var leftMenu = $('.left-nav');
@@ -34,6 +38,11 @@
                 $(this).next().toggleClass('visible');
             });
 
+        });
+
+        $(window).resize(function() {
+            $chatHeight = $(document).height() - $('.top-nav').height() - $('.bottom').height();
+            $('.chat-window').css('height', $chatHeight);
         });
     </script>
 </head>
@@ -111,8 +120,72 @@
                     Hey guys, do you like bacon?
                 </div>
             </li>
+            <li>
+                <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
+                <div class="message-content">
+                    <div class="username">Bucky Roberts</div>
+                    Hey guys, do you like bacon?
+                </div>
+            </li>
+            <li>
+                <img class="icon" src="images/sample-user-1.jpg">
+                <div class="message-content">
+                    <div class="username">Barbara Walters</div>
+                    Hey guys, do you like bacon?
+                </div>
+            </li>
+            <li>
+                <img class="icon" src="images/sample-user-2.png">
+                <div class="message-content">
+                    <div class="username">Emily Williams</div>
+                    Hey guys, do you like bacon?
+                </div>
+            </li>
+            <li>
+                <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
+                <div class="message-content">
+                    <div class="username">Bucky Roberts</div>
+                    Hey guys, do you like bacon?
+                </div>
+            </li>
+            <li>
+                <img class="icon" src="images/sample-user-1.jpg">
+                <div class="message-content">
+                    <div class="username">Barbara Walters</div>
+                    Hey guys, do you like bacon?
+                </div>
+            </li>
+            <li>
+                <img class="icon" src="images/sample-user-2.png">
+                <div class="message-content">
+                    <div class="username">Emily Williams</div>
+                    Hey guys, do you like bacon?
+                </div>
+            </li>
+            <li>
+                <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
+                <div class="message-content">
+                    <div class="username">Bucky Roberts</div>
+                    Hey guys, do you like bacon?
+                </div>
+            </li>
+            <li>
+                <img class="icon" src="images/sample-user-1.jpg">
+                <div class="message-content">
+                    <div class="username">Barbara Walters</div>
+                    Hey guys, do you like bacon?
+                </div>
+            </li>
+            <li>
+                <img class="icon" src="images/sample-user-2.png">
+                <div class="message-content">
+                    <div class="username">Emily Williams</div>
+                    Hey guys, do you like bacon?
+                </div>
+            </li>
         </ul>
     </div>
+
     <div class="bottom">
         <div class="compose-toolbar">
             <a href="#"><i class="fa fa-bold" aria-hidden="true"></i></a>
@@ -123,9 +196,12 @@
 
         <div class="compose">
             <form>
-                <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
-                <textarea rows="4" title="textArea"></textarea>
-                <div><input class="button-secondary" type="submit" title="submitButton"></div>
+                <textarea class="test" rows="4" title="textArea"></textarea>
+                <div>
+                    <button class="button-secondary">
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </button>
+                </div>
             </form>
         </div>
     </div>
