@@ -97,14 +97,14 @@ $bgColor: rgba(0, 0, 0, 0.3);
 	& > li {
 		display: block;
 
-		a {
+		& > a {
 			border-bottom: 1px solid rgba(#ffffff, 0.08);
 			display: block;
 		}
 
 		// Drop down menu
 		ul {
-			background-color: rgba(0, 0, 0, 0.2);
+			background-color: transparent;
 			display: none;
 			padding: 0;
 
@@ -113,13 +113,21 @@ $bgColor: rgba(0, 0, 0, 0.3);
 			}
 
 			li{
+				display: block;
 				list-style-type: none;
 
 				a {
 					border-bottom: 1px solid rgba(#ffffff, 0.08);
-					display: block;
+					display: flex;
 					font-size: 0.95em;
+					justify-content: space-between;
 					padding-left: 36px;
+
+					.label{
+						align-self: right;
+						opacity: 0.9;
+					}
+
 				}
 
 			}

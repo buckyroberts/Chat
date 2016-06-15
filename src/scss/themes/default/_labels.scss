@@ -1,0 +1,22 @@
+@import "variables";
+
+.label{
+	border-radius: 3px;
+	color: #ffffff;
+	padding: 2px 5px;
+	font-size: 0.9em;
+}
+
+@each $name, $value in $theme-colors {
+	.label-#{$name} {
+		@extend .label;
+		background-color: $value;
+	}
+}
+
+@each $name, $value in $theme-colors-light {
+	.label-#{$name} {
+		@extend .label;
+		background-color: $value;
+	}
+}
