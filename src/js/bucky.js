@@ -1,10 +1,19 @@
-function changeContent() {
-    var sampleJson = {
-        "name": "Tommy",
-        "age": 72,
-        "colors": ["blue", "yellow"]
-    };
-    $('.main-area').html('<h1>' + sampleJson.name + '</h1>');
+function updateBuddyList() {
+    var buddies = [
+        {"name": "John", "status": "online"},
+        {"name": "Anna", "status": "online"},
+        {"name": "Peter", "status": "offline"}
+    ];
+
+    var $list = $('<ul>');
+
+    $.each(buddies, function (index, item) {
+        console.log(index);
+        console.log(item.name, item.status);
+        $list.append($('<li>').html('<h1>'  + item.name +  '</h1>'));
+    });
+
+    $('.main-area').html($list);
 }
 
 function displayChatWindow() {

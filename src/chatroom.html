@@ -12,12 +12,11 @@
     <script>
         $(document).ready(function () {
 
-            $('#swap').click(function () {
-                changeContent();
+            $('#code').click(function () {
+                updateBuddyList();
             });
 
-            $('#gift').click(function () {
-                console.log('gift');
+            $('#display-chat').click(function () {
                 displayChatWindow();
             });
 
@@ -90,7 +89,7 @@
 </head>
 <body>
 
-    <div  class="modal" id="samplePopUp">
+    <div class="modal" id="samplePopUp">
     <div class="content">
         <div class="content-heading">
             <span class="title">Create a New Chatroom</span>
@@ -141,10 +140,10 @@
             </ul>
         </li>
         <li>
-            <a href="#" id="swap"><i class="fa fa-cubes" aria-hidden="true"></i></a>
+            <a href="#" id="code"><i class="fa fa-code" aria-hidden="true"></i></a>
         </li>
         <li>
-            <a href="#" id="gift"><i class="fa fa-gift" aria-hidden="true"></i></a>
+            <a href="#" id="display-chat"><i class="fa fa-comments" aria-hidden="true"></i></a>
         </li>
         <li class="right">
             <a href="#" class="right-menu-control">
@@ -152,7 +151,7 @@
             </a>
         </li>
     </ul>
-    <ul style="display: none" class="left-nav visible">
+    <ul class="left-nav visible">
         <li>
             <a href="#">
                 <i class="fa fa-comments" aria-hidden="true"></i>
@@ -175,7 +174,7 @@
             </ul>
         </li>
     </ul>
-    <div style="display: none" class="right-nav visible">
+    <div class="right-nav visible">
         <div class="title">Open Source Developers</div>
         <ul>
             <li>
@@ -323,7 +322,6 @@
         </div>
         <div class="bottom">
             <div class="compose-toolbar">
-                <a href="#" id="star"><i class="fa fa-star" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-italic" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-code" aria-hidden="true"></i></a>
