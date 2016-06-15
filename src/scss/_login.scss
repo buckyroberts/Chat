@@ -7,16 +7,16 @@
 
 .login-screen {
 	align-items: center;
-	background: $secondary;
+	background: $primary;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
 
 	.main-content{
-		background: rgba(white, 0.1);
-		border: 1px solid rgba(white, 0.12);
+		background: rgba(white, 0.08);
+		border: 1px solid rgba(white, 0.1);
 		margin-top: 15%;
-		padding: 24px 40px 40px;
+		padding: 16px 32px 72px;
 		text-align: center;
 		width: 40%;
 
@@ -41,7 +41,6 @@
 			}
 
 			button {
-				font-size: 1.1em;
 				font-weight: 300;
 				padding: 6px;
 			}

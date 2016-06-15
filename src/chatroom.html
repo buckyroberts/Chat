@@ -11,6 +11,10 @@
     <script>
         $(document).ready(function () {
 
+            $('#star').click(function () {
+                console.log('ummm... wtf');
+            });
+
             $('.modal-control').click(function () {
                 var modal = $('#' + $(this).data('target'));
                 modal.css('display', 'block');
@@ -136,7 +140,7 @@
             </a>
         </li>
     </ul>
-    <ul class="left-nav visible">
+    <ul style="display: none" class="left-nav visible">
         <li>
             <a href="#">
                 <i class="fa fa-comments" aria-hidden="true"></i>
@@ -159,7 +163,7 @@
             </ul>
         </li>
     </ul>
-    <div class="right-nav visible">
+    <div style="display: none" class="right-nav visible">
         <div class="title">Open Source Developers</div>
         <ul>
             <li>
@@ -269,13 +273,6 @@
                     </div>
                 </li>
                 <li>
-                    <img class="icon" src="http://i.imgur.com/cMdQnmI.jpg">
-                    <div class="message-content">
-                        <div class="username">Bucky Roberts</div>
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/uavdVHmzHG8" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </li>
-                <li>
                     <img class="icon" src="images/sample-user-1.jpg">
                     <div class="message-content">
                         <div class="username">Barbara Walters</div>
@@ -314,7 +311,7 @@
         </div>
         <div class="bottom">
             <div class="compose-toolbar">
-                <a href="#"><i class="fa fa-bold" aria-hidden="true"></i></a>
+                <a href="#" id="star"><i class="fa fa-star" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-italic" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-image" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-code" aria-hidden="true"></i></a>
@@ -322,7 +319,6 @@
                 <a href="#"><i class="fa fa-link" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-smile-o" aria-hidden="true"></i></a>
             </div>
-
             <div class="compose">
                 <form>
                     <textarea class="chatTextArea" rows="4" title="textArea"></textarea>
