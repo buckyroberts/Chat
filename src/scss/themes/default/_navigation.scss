@@ -26,6 +26,7 @@ $bgColor: $primary;
 
 .top-nav {
 	@extend .nav;
+	background-color: $bgColor * 0.96;
 	border-bottom: 1px solid rgba(#ffffff, 0.1);
 	display: flex;
 
@@ -106,6 +107,7 @@ $bgColor: $primary;
 			display: block;
 
 			.text{
+				font-weight: 500;
 				margin-left: 6px;
 			}
 
@@ -158,13 +160,13 @@ $bgColor: $primary;
 	position: fixed;
 	right: 0;
 	top: 0;
-	width: 300px;
+	width: 230px;
 	z-index: 2;
 
 	.title {
 		background-color: $primary * 0.8;
 		border-bottom: 1px solid rgba(#ffffff, 0.1);
-		font-size: 1.2em;
+		font-size: 1.1em;
 		font-weight: 500;
 		padding: 6px;
 		text-align: center;
@@ -184,7 +186,7 @@ $bgColor: $primary;
 
 			a {
 				display: flex;
-				padding: 6px;
+				padding: 6px 8px;
 
 				img.icon {
 					float: left;

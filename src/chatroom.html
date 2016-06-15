@@ -36,13 +36,24 @@
             $chatHeight = $(document).height() - $('.top-nav').height() - $('.bottom').height();
             $('.chat-window').css('height', $chatHeight);
 
-            // Sliding menu
+            // Left sliding menu
             $('a.left-menu-control').click(function () {
                 var leftMenu = $('.left-nav');
                 if (leftMenu.hasClass('visible')) {
                     leftMenu.animate({'left': '-310px'}, 250).removeClass('visible');
                 } else {
                     leftMenu.animate({'left': '0'}, 250).addClass('visible');
+                }
+            });
+
+            // Right Sliding menu
+            $('a.right-menu-control').click(function () {
+                console.log('k');
+                var rightMenu = $('.right-nav');
+                if (rightMenu.hasClass('visible')) {
+                    rightMenu.animate({'right': '-240px'}, 250).removeClass('visible');
+                } else {
+                    rightMenu.animate({'right': '0'}, 250).addClass('visible');
                 }
             });
 
@@ -119,7 +130,7 @@
             </ul>
         </li>
         <li class="right">
-            <a href="#" class="left-menu-control">
+            <a href="#" class="right-menu-control">
                 <i class="fa fa-bars" aria-hidden="true"></i>
             </a>
         </li>
