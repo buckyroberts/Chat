@@ -7,7 +7,7 @@ $bgColor: $primary;
 	background-color: $bgColor;
 	padding: 0;
 	margin: 0;
-	opacity: 0.95;
+	opacity: 0.96;
 
 	li {
 		list-style-type: none;
@@ -161,6 +161,15 @@ $bgColor: $primary;
 	width: 300px;
 	z-index: 2;
 
+	.title {
+		background-color: $primary * 0.8;
+		border-bottom: 1px solid rgba(#ffffff, 0.1);
+		font-size: 1.2em;
+		font-weight: 500;
+		padding: 6px;
+		text-align: center;
+	}
+
 	// Buddy list
 	& > ul{
 		margin: 0;
@@ -168,6 +177,10 @@ $bgColor: $primary;
 
 		& > li{
 			border-bottom: 1px solid rgba(#ffffff, 0.1);
+
+			&.offline{
+				opacity: 0.5;
+			}
 
 			a {
 				display: flex;
