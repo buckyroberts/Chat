@@ -7,7 +7,7 @@ $bgColor: $primary;
 	background-color: $bgColor;
 	padding: 0;
 	margin: 0;
-	opacity: 0.98;
+	opacity: 0.95;
 
 	li {
 		list-style-type: none;
@@ -75,7 +75,7 @@ $bgColor: $primary;
 
 		// Small screen devices
 		@media (max-width: 768px) {
-			&:not(:first-child) {
+			&:not(:first-child, :last-child) {
 				display: none;
 			}
 		}
@@ -88,13 +88,14 @@ $bgColor: $primary;
 	@extend .nav;
 	background-color: $primary;
 	border-right: 1px solid rgba(#ffffff, 0.1);
+	bottom: 0;
 	height: 100%;
+	left: 0;
 	margin-top: 43px;
-	width: 300px;
+	overflow: auto;
 	position: fixed;
 	top: 0;
-	bottom: 0;
-	left: 0;
+	width: 300px;
 	z-index: 2;
 
 	& > li {
@@ -142,4 +143,55 @@ $bgColor: $primary;
 		}
 
 	}
+}
+
+.right-nav {
+	@extend .nav;
+	background-color: $primary;
+	border-left: 1px solid rgba(#ffffff, 0.1);
+	bottom: 0;
+	color: #ffffff;
+	font-size: 11px;
+	height: 100%;
+	margin-top: 43px;
+	overflow: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 300px;
+	z-index: 2;
+
+	// Buddy list
+	& > ul{
+		margin: 0;
+		padding: 0;
+
+		& > li{
+			border-bottom: 1px solid rgba(#ffffff, 0.1);
+
+			a {
+				display: flex;
+				padding: 6px;
+
+				img.icon {
+					float: left;
+					margin-right: 6px;
+					height: 36px;
+					width: 36px;
+				}
+
+				.message-content {
+					display: inline-block;
+					flex: 1;
+
+					.username{
+						font-weight: 500;
+					}
+
+				}
+			}
+
+		}
+	}
+
 }
