@@ -50,19 +50,18 @@ $chat-spacing: 8px;
 	right: 0;
 
 	.compose-toolbar {
-		background-color: $primary;
+		background-color: $default;
 		display: flex;
-		opacity: 0.98;
+		opacity: 0.8;
 
 		a {
-			background-color: $primary;
 			color: #fff;
 			display: inline-block;
-			border-right: 1px solid $primary-light;
+			border-right: 1px solid $default * 1.1;
 			padding: 6px 12px;
 
 			&:hover {
-				background-color: $primary * 0.75;
+				background-color: $default * 0.9;
 				color: #fff;
 			}
 		}
