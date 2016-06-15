@@ -2,8 +2,9 @@
 
 $chat-spacing: 10px;
 
-.chat{
+.chat-window{
 	background: #fff;
+	height: 500px;
 
 	& > ul{
 		margin: 0;
@@ -23,8 +24,8 @@ $chat-spacing: 10px;
 			}
 
 			img.icon {
-				margin-right: 6px;
-				max-width: 8%;
+				margin-right: $chat-spacing;
+				width: 60px;
 			}
 
 			.message-content {
@@ -38,6 +39,15 @@ $chat-spacing: 10px;
 
 		}
 	}
+
+}
+
+.bottom {
+	background-color: white;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
 
 	.compose-toolbar {
 		background-color: $primary;
@@ -59,8 +69,28 @@ $chat-spacing: 10px;
 	}
 
 	.compose {
+		align-items: flex-start;
 		border-top: 1px solid #ccc;
+		display: flex;
 		padding: $chat-spacing;
+
+		form {
+			display: flex;
+			flex: 1;
+
+			img.icon {
+				margin-right: $chat-spacing;
+				height: 60px;
+				width: 60px;
+			}
+
+			textarea {
+				flex: 1;
+				margin-right: 10px;
+			}
+
+		}
+
 	}
 
 }

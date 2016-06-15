@@ -3,8 +3,13 @@
 @import "chat";
 @import "themes/default/master";
 
+html{
+	height: 100%;
+}
+
 body{
 	background: url("../images/rainbow_gradient.jpg");
+	height: 100%;
 }
 
 a, a:visited {
