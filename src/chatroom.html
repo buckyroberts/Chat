@@ -8,7 +8,22 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
     <script>
+
         $(document).ready(function () {
+
+            textareas = jQuery('textarea');
+            textareas.data('x', textareas.outerWidth());
+            textareas.data('y', textareas.outerHeight());
+            $(window).mouseup(function () {
+                var $this = jQuery(textareas);
+                if ($this.outerWidth() != $this.data('x') || $this.outerHeight() != $this.data('y')) {
+                    console.log($this.outerWidth() + ' - ' + $this.data('x') + '\n' + $this.outerHeight() + ' - ' + $this.data('y'));
+                    $chatHeight = $(document).height() - $('.top-nav').height() - $('.bottom').height();
+                    $('.chat-window').css('height', $chatHeight);
+                }
+                textareas.data('x', $this.outerWidth());
+                textareas.data('y', $this.outerHeight());
+            });
 
             // Set height of chat window
             $chatHeight = $(document).height() - $('.top-nav').height() - $('.bottom').height();
