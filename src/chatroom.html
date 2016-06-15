@@ -8,17 +8,17 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="js/bucky.js"></script>
     <script>
         $(document).ready(function () {
 
-            $('#star').click(function () {
-                var sampleJson = {
-                    "name": "Bucky",
-                    "age": 72,
-                    "colors": ["blue", "yellow"]
-                };
-                console.log(sampleJson.name);
-                $('.main-area').html('<h1>' + sampleJson.name + '</h1>');
+            $('#swap').click(function () {
+                changeContent();
+            });
+
+            $('#gift').click(function () {
+                console.log('gift');
+                displayChatWindow();
             });
 
             $('.modal-control').click(function () {
@@ -139,6 +139,12 @@
                 <li><a href="#">My Profile</a></li>
                 <li><a href="#">Notifications</a></li>
             </ul>
+        </li>
+        <li>
+            <a href="#" id="swap"><i class="fa fa-cubes" aria-hidden="true"></i></a>
+        </li>
+        <li>
+            <a href="#" id="gift"><i class="fa fa-gift" aria-hidden="true"></i></a>
         </li>
         <li class="right">
             <a href="#" class="right-menu-control">
